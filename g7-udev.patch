@@ -15,4 +15,4 @@ diff -Naur g7-10.3.0.old/60-g7.rules g7-10.3.0/60-g7.rules
 -## The site admin must then add the appropriate users to group "luna".
 -## Eg.  addgroup yren luna
 -#DRIVERS=="g7", GROUP="luna", MODE="0660"
-+KERNEL=="g7*", MODE="0660", GROUP="hsmusers"
++KERNEL=="g7*", OWNER="root", GROUP="hsmusers", MODE="0660"
