@@ -1,0 +1,18 @@
+diff -Naur g7-10.3.0.old/60-g7.rules g7-10.3.0/60-g7.rules
+--- g7-10.3.0.old/60-g7.rules	2021-01-22 17:02:46.143236580 +0100
++++ g7-10.3.0/60-g7.rules	2021-01-22 17:03:52.983431265 +0100
+@@ -1,13 +1 @@
+-#DRIVERS=="g7", OWNER="root", GROUP="luna", MODE="0777"
+-
+-## Install script should ask user if they want to allow all users access.
+-## If so, then the script should uncomment this line:
+-## DRIVERS=="g7", MODE="0666" - ubuntu and redhat 6 use DRIVERS
+-DRIVER=="g7", MODE="0666"
+-DRIVERS=="g7", MODE="0666"
+-
+-## Otherwise, the Installer could offer to create a "luna" group (if not already there),
+-## and then automatically add this line instead of making it globally accessible.
+-## The site admin must then add the appropriate users to group "luna".
+-## Eg.  addgroup yren luna
+-#DRIVERS=="g7", GROUP="luna", MODE="0660"
++KERNEL=="g7*", MODE="0660", GROUP="hsmusers"
